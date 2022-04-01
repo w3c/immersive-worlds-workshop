@@ -19,13 +19,13 @@ body {
 
 html {
   font-size: 14px;
-  padding: 3em;
+  padding: 0;
 }
 
 body {
-  border-radius: .6em;
+  border-radius: 0;
   color: #333;
-  font: 1.1em/1.3 Helvetica, Arial, Verdana, sans-serif;
+  font: 1.1em/1.3 Open Sans, Helvetica, Arial, Verdana, sans-serif;
   hyphens: manual;
   margin: 0 auto;
   max-width: 65em;
@@ -365,20 +365,23 @@ address {
 }
 
 @media all and (min-width: 699px) {
+  body {
+    padding: 3em;
+  }
+}
+
+@media all and (min-width: 860px) {
   html {
     background: #005a9c;
+    padding: 3em;
+  }
+
+  body {
+    border-radius: .6em;
   }
 }
 
 @media all and (max-width: 860px) {
-  html {
-    padding: 0;
-  }
-
-  body {
-    border-radius: 0;
-  }
-
   .menu ul {
     display: block;
   }
@@ -826,9 +829,9 @@ ol ol {
 
 #banner .banner-title {
   position: relative;
-  background: url('media/immersive-banner-sm.jpg') no-repeat 100% 100%;
+  background: url('media/immersive-banner-sm.jpg') no-repeat 30% 100%;
   background-size: auto 100%;
-  height: 302px;
+  height: min(302px, calc(210 * (100vw / 400)));
 }
 
 #banner h1 {
@@ -840,7 +843,7 @@ ol ol {
   text-align: right;
   font-size: min(180% + 1vw, 240%);
   line-height: 1.4;
-  padding: 1em;
+  padding: 0.5em;
 }
 #banner h1+p {
   margin-top: 0;
@@ -1063,10 +1066,6 @@ div.talks h4 {
 }
 
 @media all and (min-width: 500px) {
-  body {
-    padding: 3em;
-  }
-
   div.talks h4 {
     font-size: 1.3em;
   }
