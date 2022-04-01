@@ -1,0 +1,281 @@
+@media all {
+  @page {
+    margin: 0.25in;
+  }
+
+  html {
+    position: relative;
+    background: none;
+    width: 8in;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    max-width: none;
+  }
+
+  h1 {
+    background: none;
+    color: #111;
+  }
+
+  nav, aside {
+    display: none;
+  }
+
+  body,
+  article {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .main {
+    margin: 0;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+  h3 {
+    border-top: thick solid #005a9c;
+    border-bottom: thick solid #005a9c;
+    padding-top: 0.6em;
+    padding-bottom: 0.6em;
+    margin-top: 0.25in;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+    color: #005a9c;
+  }
+
+  h4 {
+    border-bottom: thin solid black;
+    padding-bottom: 0.3em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.3em;
+  }
+
+  h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.15em;
+  }
+
+  header .w3c {
+    position: absolute;
+    top: 0;
+    left: 0.6in;
+    width: 100px;
+  }
+
+  header h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 0.65in;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  header h1::before {
+   content: none !important;
+  }
+
+  header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0.5in;
+    top: 2in;
+    width: 7in;
+    height: 8in;
+    background-color: black;
+    clip-path: polygon(50% 20%, 100% 0%, 100% 40%);
+    z-index: -1;
+  }
+
+  header > div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0.5in;
+    top: 2in;
+    width: 7in;
+    height: 8in;
+    background-color: black;
+    clip-path: polygon(0 60%, 50% 80%, 0 100%);
+    z-index: -1;
+  }
+
+  header > div > div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0.5in;
+    top: 2in;
+    width: 7in;
+    height: 8in;
+    background-image: url('media/timeline-thin-sm.png');
+    background-size: 178% 120%;
+    background-position: 58% 100%;
+    background-repeat: no-repeat;
+    clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 40%, 100% 100%, 50% 80%, 0% 100%);
+    z-index: -2;
+  }
+
+  header .boxes h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+  }
+
+  header .boxes img {
+    display: inline;
+  }
+
+  header .boxes p {
+    margin-top: 0;
+  }
+
+  header .host {
+    position: absolute;
+    top: 2.1in;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  header .sponsor {
+    position: absolute;
+    top: 9.1in;
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  header .date,
+  header .location {
+    position: absolute;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.1em;
+    width: 12rem;
+  }
+
+  header .date {
+    top: 2.7in;
+    right: 0.7in;
+  }
+
+  header .location {
+    top: 7.7in;
+    left: 0.7in;
+    text-align: left;
+  }
+
+  header .link {
+    position: absolute;
+    top: 9.9in;
+    left: 0;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+  }
+
+  header {
+    margin-bottom: 80rem;
+  }
+
+  article {
+    page-break-before: always;
+    font-size: 0.75em;
+  }
+
+  .lunch {
+    break-before: column;
+    margin-top: 0 !important;
+  }
+
+  ul, img, dl, details, summary {
+    break-inside: avoid-column;
+  }
+
+  .has-ref {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  #dates {
+    display: none;
+  }
+
+  *[data-controls] {
+    display: none;
+  }
+
+  #schedule {
+    display: none;
+  }
+
+  .schedule {
+    column-count: 2;
+    column-rule: thick solid #005a9c;
+    column-gap: 2rem;
+  }
+
+  .schedule details dl {
+    margin-left: 0;
+    box-shadow: none;
+  }
+
+  .schedule details summary .desc::before {
+    content: '';
+    width: 0;
+    margin-right: 0;
+  }
+
+  .schedule .scribe {
+    display: none;
+  }
+
+  .schedule li + li {
+    margin-top: 0;
+  }
+
+  .note {
+    display: none;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    margin-bottom: 0;
+    font-size: 0.7em;
+  }
+  .footer p {
+    margin: 0;
+  }
+
+  .schedule span.title {
+    margin-left: 0;
+  }
+
+  .schedule .type {
+    margin-right: 8px;
+  }
+}
