@@ -32,6 +32,11 @@ body {
   padding: 1em;
 }
 
+aside {
+  position: relative;
+  z-index: 1;
+}
+
 .header :first-child {
   margin-top: 0;
 }
@@ -837,6 +842,7 @@ ol ol {
 #banner h1 {
   position: absolute;
   right: 0;
+  bottom: 0;
   width: min(11em, 100%);
   margin: 0;
   color: white;
